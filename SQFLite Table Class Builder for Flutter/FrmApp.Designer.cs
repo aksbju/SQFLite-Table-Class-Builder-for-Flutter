@@ -235,6 +235,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.chkBoxAutoIncrement.TabIndex = 5;
             this.chkBoxAutoIncrement.Text = "Auto Increment";
             this.chkBoxAutoIncrement.UseVisualStyleBackColor = true;
+            this.chkBoxAutoIncrement.CheckedChanged += new System.EventHandler(this.chkBoxAutoIncrement_CheckedChanged);
             // 
             // cBoxPrimaryKey
             // 

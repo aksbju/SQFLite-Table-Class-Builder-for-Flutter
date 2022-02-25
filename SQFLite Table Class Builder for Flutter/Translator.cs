@@ -25,7 +25,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
 
         void PrepareTableCode()
         {
-            this.tableCode += $"const String table{StringExtensions.ToTitleCase(tableName)} = '{tableName}';";
+            this.tableCode += $"const String table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())} = '{this.tableName.Replace(" ", "_").ToLower()}';";
             this.tableCode += Environment.NewLine;
             foreach (var each in columns)
             {
@@ -33,7 +33,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
                 this.tableCode += Environment.NewLine;
             }
             this.tableCode += Environment.NewLine;
-            this.tableCode += $"class {StringExtensions.ToTitleCase(tableName)} " + "{";
+            this.tableCode += $"class {StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())} " + "{";
             this.tableCode += Environment.NewLine;
             foreach (var each in columns) 
             {
@@ -47,7 +47,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
                 }
                 this.tableCode += Environment.NewLine;
             }
-            this.tableCode += indent + $"{StringExtensions.ToTitleCase(tableName)}";
+            this.tableCode += indent + $"{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}";
             this.tableCode += "({";
             this.tableCode += Environment.NewLine;
             foreach (var each in columns)
@@ -57,6 +57,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             }
             this.tableCode += indent + "});";
             this.tableCode += Environment.NewLine;
+            ///////////////////////////////////
             this.tableCode += indent + "Map<String, Object?> toMap() {";
             this.tableCode += Environment.NewLine;
             this.tableCode += indent + indent + "return <String, Object?>{";
@@ -70,7 +71,17 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tableCode += Environment.NewLine;
             this.tableCode += indent + "}";
             this.tableCode += Environment.NewLine;
-
+            ///////////////////////////////////
+            this.tableCode += indent + $"{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}" + ".fromMap(Map<String, Object?> map) {";
+            this.tableCode += Environment.NewLine;
+            foreach (var each in columns) 
+            {
+                this.tableCode += indent + indent + $"{each.ColumnName} = map[column{StringExtensions.ToTitleCase(each.ColumnName.Replace("_", ""))}] as {(each.DataType == "INTEGER" ? "int" : each.DataType == "TEXT" ? "String" : "dynamic")};";
+                this.tableCode += Environment.NewLine;
+            }
+            this.tableCode += indent + "}";
+            this.tableCode += Environment.NewLine;
+            ///////////////////////////////////
             this.tableCode += "}";
         }
         void PrepareTableProviderCode()
@@ -80,7 +91,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tableProviderCode += $"import '{this.tableName.Replace(" ", "_").ToLower()}.dart';";
             this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += Environment.NewLine;
-            this.tableProviderCode += $"class {StringExtensions.ToTitleCase(tableName)}Provider " + "{";
+            this.tableProviderCode += $"class {StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}Provider " + "{";
             this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += indent + "late Database db;";
             this.tableProviderCode += Environment.NewLine;
@@ -96,12 +107,12 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += indent + indent + indent + indent + indent + "await db.execute('''";
             this.tableProviderCode += Environment.NewLine;
-            this.tableProviderCode += indent + indent + indent + indent + indent + $"create table $table{StringExtensions.ToTitleCase(tableName)} (";
+            this.tableProviderCode += indent + indent + indent + indent + indent + $"create table $table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())} (";
             this.tableProviderCode += Environment.NewLine;
             int counter = 0;
             foreach (var each in columns) 
             {
-                this.tableProviderCode += indent + indent + indent + indent + indent + indent + $"$column{StringExtensions.ToTitleCase(each.ColumnName.Replace("_", ""))} {each.DataType}{(primaryKey == counter ? " PRIMARY KEY" : "")}{(this.autoIncrement ? " AUTOINCREMENT" : "")},";
+                this.tableProviderCode += indent + indent + indent + indent + indent + indent + $"$column{StringExtensions.ToTitleCase(each.ColumnName.Replace("_", ""))} {each.DataType}{(primaryKey == counter ? " PRIMARY KEY" : "")}{(primaryKey == counter && this.autoIncrement ? " AUTOINCREMENT" : "")},";
                 this.tableProviderCode += Environment.NewLine;
                 counter++;
             }
@@ -116,6 +127,53 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
 
             this.tableProviderCode += indent + "}";
             this.tableProviderCode += Environment.NewLine;
+
+
+            this.tableProviderCode += Environment.NewLine;
+
+
+            // insert
+            this.tableProviderCode += indent + $"Future insert({StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())} {this.tableName.Replace(" ", "_").ToLower()}) async" + " {";
+            this.tableProviderCode += Environment.NewLine;
+            this.tableProviderCode += indent + indent + $"await db.insert($table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}, {this.tableName.Replace(" ", "_").ToLower()}.toMap());";
+            this.tableProviderCode += Environment.NewLine;
+            this.tableProviderCode += indent + "}";
+            this.tableProviderCode += Environment.NewLine;
+
+            this.tableProviderCode += Environment.NewLine;
+
+            // get
+            this.tableProviderCode += indent + $"Future<{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}> get() async" + " {";
+            this.tableProviderCode += Environment.NewLine;
+            //// Code here
+            this.tableProviderCode += indent + "}";
+            this.tableProviderCode += Environment.NewLine;
+
+            this.tableProviderCode += Environment.NewLine;
+
+            // delete
+            this.tableProviderCode += indent + $"Future delete({StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())} {this.tableName.Replace(" ", "_").ToLower()}) async" + " {";
+            this.tableProviderCode += Environment.NewLine;
+            //// Code here
+            this.tableProviderCode += indent + "}";
+            this.tableProviderCode += Environment.NewLine;
+
+            this.tableProviderCode += Environment.NewLine;
+
+            // update
+            this.tableProviderCode += indent + $"Future update({StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())} {this.tableName.Replace(" ", "_").ToLower()}) async" + " {";
+            this.tableProviderCode += Environment.NewLine;
+            //// Code here
+            this.tableProviderCode += indent + "}";
+            this.tableProviderCode += Environment.NewLine;
+
+            this.tableProviderCode += Environment.NewLine;
+
+            // close
+            this.tableProviderCode += indent + $"Future close() async => db.close();";
+
+            this.tableProviderCode += Environment.NewLine;
+
             this.tableProviderCode += "}";
         }
         public CodeModel Translate()

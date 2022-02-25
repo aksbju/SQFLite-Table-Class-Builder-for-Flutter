@@ -39,7 +39,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
 
         private void doTranslate()
         {
-            this.translator = new Translator(this.tBoxTable.Text, columns, this.cBoxPrimaryKey.SelectedIndex, this.chkBoxAutoIncrement.Checked);
+            this.translator = new Translator((this.tBoxTable.Text != "" ? this.tBoxTable.Text : "table"), columns, this.cBoxPrimaryKey.SelectedIndex, this.chkBoxAutoIncrement.Checked);
             CodeModel code = translator.Translate();
             this.tBoxTableCode.Text = code.TableCode;
             this.tBoxTableProviderCode.Text = code.TableProviderCode;
@@ -165,6 +165,11 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
         {
             about _about = new about();
             _about.ShowDialog();
+        }
+
+        private void chkBoxAutoIncrement_CheckedChanged(object sender, EventArgs e)
+        {
+            doTranslate();
         }
     }
 }
