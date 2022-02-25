@@ -59,6 +59,14 @@
     <Compile Include="about.Designer.cs">
       <DependentUpon>about.cs</DependentUpon>
     </Compile>
+    <Compile Include="CodeModel.cs" />
+    <Compile Include="Column.cs" />
+    <Compile Include="FrmAddColumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddColumn.Designer.cs">
+      <DependentUpon>FrmAddColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmApp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +75,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="Translator.cs" />
     <EmbeddedResource Include="about.resx">
       <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddColumn.resx">
+      <DependentUpon>FrmAddColumn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmApp.resx">
       <DependentUpon>FrmApp.cs</DependentUpon>
@@ -99,6 +112,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1_Ufd34tmI3Ortayiq9ZsNDA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53453892-49908900-3a04-11e9-9dce-77ed3d694326.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-icon-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

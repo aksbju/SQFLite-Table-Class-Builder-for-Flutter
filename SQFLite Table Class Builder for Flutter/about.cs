@@ -101,5 +101,10 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             }
         }
         #endregion
+
+        private void btnVisit_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/aksbju/SQFLite-Table-Class-Builder-for-Flutter/");
+        }
     }
 }

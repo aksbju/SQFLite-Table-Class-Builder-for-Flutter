@@ -69,5 +69,25 @@ namespace SQFLite_Table_Class_Builder_for_Flutter.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _53453892_49908900_3a04_11e9_9dce_77ed3d694326 {
+            get {
+                object obj = ResourceManager.GetObject("53453892-49908900-3a04-11e9-9dce-77ed3d694326", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_icon_4 {
+            get {
+                object obj = ResourceManager.GetObject("key-icon-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
