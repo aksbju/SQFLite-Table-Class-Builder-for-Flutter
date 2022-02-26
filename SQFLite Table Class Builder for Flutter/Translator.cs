@@ -143,7 +143,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tableProviderCode += Environment.NewLine;
 
             // get
-            this.tableProviderCode += indent + $"Future<{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}> get() async" + " {";
+            this.tableProviderCode += indent + $"Future<{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}> get({(this.columns[this.primaryKey].DataType == "INTEGER" ? "int" : this.columns[this.primaryKey].DataType == "TEXT" ? "String" : "dynamic") + $" {this.columns[this.primaryKey].ColumnName}"}) async" + " {";
             this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += indent + indent + $"List<Map<String, dynamic>> maps = await db.query($table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())},";
             this.tableProviderCode += Environment.NewLine;
