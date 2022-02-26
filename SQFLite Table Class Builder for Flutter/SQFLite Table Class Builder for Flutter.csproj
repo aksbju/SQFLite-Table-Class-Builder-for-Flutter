@@ -32,6 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SQFLite_Table_Class_Builder_for_Flutter.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>flutter-2752187-2285004.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -120,6 +126,7 @@
     <None Include="Resources\key-icon-4.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="flutter-2752187-2285004.ico" />
     <Content Include="image.jpg" />
     <None Include="Resources\editing.png" />
   </ItemGroup>

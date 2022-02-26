@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SQFLite Table Class Builder for Flutter")]
-[assembly: AssemblyDescription("Compatible with package 'sqflite'")]
+[assembly: AssemblyDescription("Compatible with package 'sqflite'\nhttps://github.com/aksbju/SQFLite-Table-Class-Builder-for-Flutter/")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Developed by Akash Shaw")]
 [assembly: AssemblyProduct("SQFLite Table Class Builder for Flutter")]
