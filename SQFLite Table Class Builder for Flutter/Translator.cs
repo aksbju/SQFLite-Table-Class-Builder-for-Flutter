@@ -145,7 +145,24 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             // get
             this.tableProviderCode += indent + $"Future<{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}> get() async" + " {";
             this.tableProviderCode += Environment.NewLine;
-            //// Code here
+            this.tableProviderCode += indent + indent + $"List<Map<String, dynamic>> maps = await db.query($table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())},";
+            this.tableProviderCode += Environment.NewLine;
+            this.tableProviderCode += indent + indent + indent + "columns: [";
+            this.tableProviderCode += Environment.NewLine;
+            foreach (var each in columns)
+            {
+                this.tableProviderCode += indent + indent + indent + indent + $"column{StringExtensions.ToTitleCase(each.ColumnName.Replace("_", ""))},";
+                this.tableProviderCode += Environment.NewLine;
+            }
+
+
+            this.tableProviderCode += indent + indent + indent + "]";
+            this.tableProviderCode += Environment.NewLine;
+            this.tableProviderCode += "";
+
+            this.tableProviderCode += Environment.NewLine;
+            this.tableProviderCode += indent + indent + ");";
+            this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += indent + "}";
             this.tableProviderCode += Environment.NewLine;
 

@@ -123,6 +123,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tBoxTableCode.Margin = new System.Windows.Forms.Padding(4);
             this.tBoxTableCode.Multiline = true;
             this.tBoxTableCode.Name = "tBoxTableCode";
+            this.tBoxTableCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tBoxTableCode.Size = new System.Drawing.Size(585, 222);
             this.tBoxTableCode.TabIndex = 13;
             // 
