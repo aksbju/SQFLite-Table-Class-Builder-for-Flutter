@@ -14,18 +14,15 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
         List<Column> columns;
         public int primaryKey;
         public bool autoIncrement;
-        string indent = "  "; // 4spaces
+        string indent; // 4spaces
 
-        public void setIndent(int indent)
-        {
-            this.indent = String.Concat(Enumerable.Repeat(" ", indent));
-        }
-        public Translator(string tableName, List<Column> columns, int primaryKey, bool autoIncrement)
+        public Translator(string tableName, List<Column> columns, int primaryKey, bool autoIncrement, int indent)
         {
             this.tableName = tableName;
             this.columns = columns;
             this.primaryKey = primaryKey;
             this.autoIncrement = autoIncrement;
+            this.indent = String.Concat(Enumerable.Repeat(" ", indent));
         }
 
         void PrepareTableCode()
