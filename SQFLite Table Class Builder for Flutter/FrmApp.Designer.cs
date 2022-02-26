@@ -62,6 +62,8 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.label3 = new System.Windows.Forms.Label();
             this.dtbColumns = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.toolStripFooter = new System.Windows.Forms.ToolStrip();
+            this.optionIndent = new System.Windows.Forms.ToolStripComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -77,6 +79,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtbColumns)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            this.toolStripFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -94,7 +97,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(646, 511);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(646, 516);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // panel8
@@ -107,7 +110,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel8.Location = new System.Drawing.Point(4, 4);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(638, 247);
+            this.panel8.Size = new System.Drawing.Size(638, 250);
             this.panel8.TabIndex = 12;
             // 
             // pictureBox2
@@ -134,7 +137,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tBoxTableCode.Multiline = true;
             this.tBoxTableCode.Name = "tBoxTableCode";
             this.tBoxTableCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tBoxTableCode.Size = new System.Drawing.Size(585, 222);
+            this.tBoxTableCode.Size = new System.Drawing.Size(585, 225);
             this.tBoxTableCode.TabIndex = 13;
             // 
             // lblTableFileName
@@ -194,17 +197,17 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel6.Controls.Add(this.lblTableProviderFileName);
             this.panel6.Controls.Add(this.panel4);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(4, 259);
+            this.panel6.Location = new System.Drawing.Point(4, 262);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(638, 248);
+            this.panel6.Size = new System.Drawing.Size(638, 250);
             this.panel6.TabIndex = 11;
             // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.btnInfo);
-            this.panel7.Location = new System.Drawing.Point(596, 170);
+            this.panel7.Location = new System.Drawing.Point(596, 172);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(38, 74);
@@ -248,7 +251,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tBoxTableProviderCode.Multiline = true;
             this.tBoxTableProviderCode.Name = "tBoxTableProviderCode";
             this.tBoxTableProviderCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tBoxTableProviderCode.Size = new System.Drawing.Size(585, 222);
+            this.tBoxTableProviderCode.Size = new System.Drawing.Size(585, 224);
             this.tBoxTableProviderCode.TabIndex = 14;
             // 
             // lblTableProviderFileName
@@ -309,7 +312,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(272, 511);
+            this.panel1.Size = new System.Drawing.Size(272, 516);
             this.panel1.TabIndex = 9;
             // 
             // panel5
@@ -320,7 +323,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel5.Controls.Add(this.chkBoxAutoIncrement);
             this.panel5.Controls.Add(this.cBoxPrimaryKey);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(0, 441);
+            this.panel5.Location = new System.Drawing.Point(0, 446);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(269, 70);
@@ -417,7 +420,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel3.Location = new System.Drawing.Point(0, 38);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(269, 399);
+            this.panel3.Size = new System.Drawing.Size(269, 404);
             this.panel3.TabIndex = 8;
             // 
             // btnRemove
@@ -473,32 +476,66 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.dtbColumns.Location = new System.Drawing.Point(4, 38);
             this.dtbColumns.Margin = new System.Windows.Forms.Padding(4);
             this.dtbColumns.Name = "dtbColumns";
-            this.dtbColumns.Size = new System.Drawing.Size(261, 358);
+            this.dtbColumns.Size = new System.Drawing.Size(261, 363);
             this.dtbColumns.TabIndex = 0;
             this.dtbColumns.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtbColumns_CellEndEdit);
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(934, 519);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(934, 524);
             this.tableLayoutPanel2.TabIndex = 10;
+            // 
+            // toolStripFooter
+            // 
+            this.toolStripFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.toolStripFooter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStripFooter.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripFooter.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.optionIndent});
+            this.toolStripFooter.Location = new System.Drawing.Point(0, 528);
+            this.toolStripFooter.Name = "toolStripFooter";
+            this.toolStripFooter.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStripFooter.Size = new System.Drawing.Size(934, 25);
+            this.toolStripFooter.Stretch = true;
+            this.toolStripFooter.TabIndex = 11;
+            this.toolStripFooter.Text = "Footer Strip";
+            // 
+            // optionIndent
+            // 
+            this.optionIndent.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.optionIndent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.optionIndent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.optionIndent.ForeColor = System.Drawing.SystemColors.Window;
+            this.optionIndent.Items.AddRange(new object[] {
+            "1 Spaces",
+            "2 Spaces",
+            "4 Spaces",
+            "8 Spaces"});
+            this.optionIndent.Name = "optionIndent";
+            this.optionIndent.Size = new System.Drawing.Size(100, 25);
+            this.optionIndent.SelectedIndexChanged += new System.EventHandler(this.optionIndent_SelectedIndexChanged);
             // 
             // FrmApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(934, 519);
+            this.ClientSize = new System.Drawing.Size(934, 553);
+            this.Controls.Add(this.toolStripFooter);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
@@ -527,7 +564,10 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtbColumns)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.toolStripFooter.ResumeLayout(false);
+            this.toolStripFooter.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -565,6 +605,8 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel7;
         private FontAwesome.Sharp.IconButton btnInfo;
+        private System.Windows.Forms.ToolStrip toolStripFooter;
+        private System.Windows.Forms.ToolStripComboBox optionIndent;
     }
 }
 

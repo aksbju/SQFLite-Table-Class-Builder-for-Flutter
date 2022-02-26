@@ -32,9 +32,9 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tBoxColumnName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnOk = new FontAwesome.Sharp.IconButton();
-            this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.cBoxDataType = new System.Windows.Forms.ComboBox();
+            this.btnCancel = new FontAwesome.Sharp.IconButton();
+            this.btnOk = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // tBoxColumnName
@@ -62,18 +62,16 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.label2.TabIndex = 3;
             this.label2.Text = "DataType";
             // 
-            // btnOk
+            // cBoxDataType
             // 
-            this.btnOk.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnOk.IconColor = System.Drawing.Color.Black;
-            this.btnOk.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOk.Location = new System.Drawing.Point(201, 70);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
-            this.btnOk.TabIndex = 4;
-            this.btnOk.Text = "Ok";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            this.cBoxDataType.FormattingEnabled = true;
+            this.cBoxDataType.Items.AddRange(new object[] {
+            "INTEGER",
+            "TEXT"});
+            this.cBoxDataType.Location = new System.Drawing.Point(106, 41);
+            this.cBoxDataType.Name = "cBoxDataType";
+            this.cBoxDataType.Size = new System.Drawing.Size(170, 23);
+            this.cBoxDataType.TabIndex = 6;
             // 
             // btnCancel
             // 
@@ -88,16 +86,18 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // cBoxDataType
+            // btnOk
             // 
-            this.cBoxDataType.FormattingEnabled = true;
-            this.cBoxDataType.Items.AddRange(new object[] {
-            "INTEGER",
-            "TEXT"});
-            this.cBoxDataType.Location = new System.Drawing.Point(106, 41);
-            this.cBoxDataType.Name = "cBoxDataType";
-            this.cBoxDataType.Size = new System.Drawing.Size(170, 23);
-            this.cBoxDataType.TabIndex = 6;
+            this.btnOk.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnOk.IconColor = System.Drawing.Color.Black;
+            this.btnOk.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOk.Location = new System.Drawing.Point(201, 70);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.TabIndex = 4;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // FrmAddColumn
             // 
@@ -114,6 +114,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmAddColumn";
             this.Text = "New";
+            this.Load += new System.EventHandler(this.FrmAddColumn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

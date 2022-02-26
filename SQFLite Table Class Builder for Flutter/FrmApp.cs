@@ -32,14 +32,13 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             }
             else
             {
-                this.lblTableFileName.Text = $"table.dart";
-                this.lblTableProviderFileName.Text = $"table_provider.dart";
+                this.lblTableFileName.Text = $"example.dart";
+                this.lblTableProviderFileName.Text = $"example_provider.dart";
             }
         }
-
         private void doTranslate()
         {
-            this.translator = new Translator((this.tBoxTable.Text != "" ? this.tBoxTable.Text : "table"), columns, this.cBoxPrimaryKey.SelectedIndex, this.chkBoxAutoIncrement.Checked);
+            this.translator = new Translator((this.tBoxTable.Text != "" ? this.tBoxTable.Text : "example"), columns, this.cBoxPrimaryKey.SelectedIndex, this.chkBoxAutoIncrement.Checked);
             CodeModel code = translator.Translate();
             this.tBoxTableCode.Text = code.TableCode;
             this.tBoxTableProviderCode.Text = code.TableProviderCode;
@@ -91,7 +90,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
 
         private void FrmApp_Load(object sender, EventArgs e)
         {
-            //this.tBoxTable.Text = "table";
+            this.optionIndent.SelectedIndex = 2;
             this.columns = new List<Column>();
             this.columns.Add(new SQFLite_Table_Class_Builder_for_Flutter.Column
             {
@@ -169,6 +168,36 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
 
         private void chkBoxAutoIncrement_CheckedChanged(object sender, EventArgs e)
         {
+            doTranslate();
+        }
+
+
+
+        private void optionIndent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(this.translator != null)
+            {
+                if (this.optionIndent.Text == "1 Spaces")
+                {
+                    this.translator.setIndent(1);
+                }
+                else if (this.optionIndent.Text == "2 Spaces")
+                {
+                    this.translator.setIndent(2);
+                }
+                else if (this.optionIndent.Text == "4 Spaces")
+                {
+                    this.translator.setIndent(4);
+                }
+                else if (this.optionIndent.Text == "8 Spaces")
+                {
+                    this.translator.setIndent(8);
+                }
+                else
+                {
+                    this.translator.setIndent(4);
+                }
+            }
             doTranslate();
         }
     }

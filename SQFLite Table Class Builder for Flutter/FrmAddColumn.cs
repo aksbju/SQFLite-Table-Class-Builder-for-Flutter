@@ -30,5 +30,10 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.DataType = this.cBoxDataType.Text;
             this.Close();
         }
+
+        private void FrmAddColumn_Load(object sender, EventArgs e)
+        {
+            this.cBoxDataType.SelectedIndex = 0;
+        }
     }
 }
