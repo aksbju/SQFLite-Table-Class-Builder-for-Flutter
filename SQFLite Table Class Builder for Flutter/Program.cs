@@ -16,7 +16,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmApp());
+            Application.Run(new btnSaveTableProvider());
         }
     }
 }

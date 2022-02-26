@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace SQFLite_Table_Class_Builder_for_Flutter
 {
-    public partial class FrmApp : Form
+    public partial class btnSaveTableProvider : Form
     {
         Translator translator;
         List<Column> columns;
-        public FrmApp()
+        public btnSaveTableProvider()
         {
             InitializeComponent();
         }
@@ -90,7 +90,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
 
         private void FrmApp_Load(object sender, EventArgs e)
         {
-            this.optionIndent.SelectedIndex = 2;
+            this.optionIndent.SelectedIndex = 1;
             this.columns = new List<Column>();
             this.columns.Add(new SQFLite_Table_Class_Builder_for_Flutter.Column
             {

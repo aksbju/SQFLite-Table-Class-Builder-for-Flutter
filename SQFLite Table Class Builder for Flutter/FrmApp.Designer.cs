@@ -1,7 +1,7 @@
 ﻿
 namespace SQFLite_Table_Class_Builder_for_Flutter
 {
-    partial class FrmApp
+    partial class btnSaveTableProvider
     {
         /// <summary>
         /// Required designer variable.
@@ -29,27 +29,18 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmApp));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnSaveTableProvider));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tBoxTableCode = new System.Windows.Forms.TextBox();
             this.lblTableFileName = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.btnCopyTable = new FontAwesome.Sharp.IconButton();
-            this.btnSaveTable = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnInfo = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tBoxTableProviderCode = new System.Windows.Forms.TextBox();
             this.lblTableProviderFileName = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCopyTableProvider = new FontAwesome.Sharp.IconButton();
-            this.btnSaveTableProvider = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.chkBoxAutoIncrement = new System.Windows.Forms.CheckBox();
             this.cBoxPrimaryKey = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,29 +48,38 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tBoxTable = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnRemove = new FontAwesome.Sharp.IconButton();
-            this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.dtbColumns = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStripFooter = new System.Windows.Forms.ToolStrip();
             this.optionIndent = new System.Windows.Forms.ToolStripComboBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCopyTable = new System.Windows.Forms.Button();
+            this.btnSaveTable = new System.Windows.Forms.Button();
+            this.btnCopyTableProvider = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtbColumns)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.toolStripFooter.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -112,16 +112,6 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(638, 250);
             this.panel8.TabIndex = 12;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources._53453892_49908900_3a04_11e9_9dce_77ed3d694326;
-            this.pictureBox2.Location = new System.Drawing.Point(7, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
             // 
             // tBoxTableCode
             // 
@@ -159,44 +149,16 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel9.Location = new System.Drawing.Point(596, 25);
             this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(38, 74);
+            this.panel9.Size = new System.Drawing.Size(38, 76);
             this.panel9.TabIndex = 11;
-            // 
-            // btnCopyTable
-            // 
-            this.btnCopyTable.IconChar = FontAwesome.Sharp.IconChar.Copy;
-            this.btnCopyTable.IconColor = System.Drawing.Color.Black;
-            this.btnCopyTable.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCopyTable.IconSize = 18;
-            this.btnCopyTable.Location = new System.Drawing.Point(4, 40);
-            this.btnCopyTable.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCopyTable.Name = "btnCopyTable";
-            this.btnCopyTable.Size = new System.Drawing.Size(31, 30);
-            this.btnCopyTable.TabIndex = 1;
-            this.btnCopyTable.UseVisualStyleBackColor = true;
-            this.btnCopyTable.Click += new System.EventHandler(this.btnCopyTable_Click);
-            // 
-            // btnSaveTable
-            // 
-            this.btnSaveTable.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnSaveTable.IconColor = System.Drawing.Color.Black;
-            this.btnSaveTable.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSaveTable.IconSize = 18;
-            this.btnSaveTable.Location = new System.Drawing.Point(4, 4);
-            this.btnSaveTable.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSaveTable.Name = "btnSaveTable";
-            this.btnSaveTable.Size = new System.Drawing.Size(31, 30);
-            this.btnSaveTable.TabIndex = 0;
-            this.btnSaveTable.UseVisualStyleBackColor = true;
-            this.btnSaveTable.Click += new System.EventHandler(this.btnSaveTable_Click);
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.panel4);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.pictureBox1);
             this.panel6.Controls.Add(this.tBoxTableProviderCode);
             this.panel6.Controls.Add(this.lblTableProviderFileName);
-            this.panel6.Controls.Add(this.panel4);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(4, 262);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
@@ -208,35 +170,11 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.Controls.Add(this.btnInfo);
-            this.panel7.Location = new System.Drawing.Point(596, 172);
+            this.panel7.Location = new System.Drawing.Point(596, 206);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(38, 74);
+            this.panel7.Size = new System.Drawing.Size(38, 40);
             this.panel7.TabIndex = 13;
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.IconChar = FontAwesome.Sharp.IconChar.Info;
-            this.btnInfo.IconColor = System.Drawing.Color.Black;
-            this.btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInfo.IconSize = 18;
-            this.btnInfo.Location = new System.Drawing.Point(4, 40);
-            this.btnInfo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(31, 30);
-            this.btnInfo.TabIndex = 1;
-            this.btnInfo.UseVisualStyleBackColor = true;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources._53453892_49908900_3a04_11e9_9dce_77ed3d694326;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
             // 
             // tBoxTableProviderCode
             // 
@@ -266,45 +204,6 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.lblTableProviderFileName.TabIndex = 13;
             this.lblTableProviderFileName.Text = "table_provider.dart";
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.btnCopyTableProvider);
-            this.panel4.Controls.Add(this.btnSaveTableProvider);
-            this.panel4.Location = new System.Drawing.Point(596, 22);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(38, 74);
-            this.panel4.TabIndex = 12;
-            // 
-            // btnCopyTableProvider
-            // 
-            this.btnCopyTableProvider.IconChar = FontAwesome.Sharp.IconChar.Copy;
-            this.btnCopyTableProvider.IconColor = System.Drawing.Color.Black;
-            this.btnCopyTableProvider.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCopyTableProvider.IconSize = 18;
-            this.btnCopyTableProvider.Location = new System.Drawing.Point(4, 40);
-            this.btnCopyTableProvider.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCopyTableProvider.Name = "btnCopyTableProvider";
-            this.btnCopyTableProvider.Size = new System.Drawing.Size(31, 30);
-            this.btnCopyTableProvider.TabIndex = 1;
-            this.btnCopyTableProvider.UseVisualStyleBackColor = true;
-            this.btnCopyTableProvider.Click += new System.EventHandler(this.btnCopyTableProvider_Click);
-            // 
-            // btnSaveTableProvider
-            // 
-            this.btnSaveTableProvider.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnSaveTableProvider.IconColor = System.Drawing.Color.Black;
-            this.btnSaveTableProvider.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSaveTableProvider.IconSize = 18;
-            this.btnSaveTableProvider.Location = new System.Drawing.Point(4, 4);
-            this.btnSaveTableProvider.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSaveTableProvider.Name = "btnSaveTableProvider";
-            this.btnSaveTableProvider.Size = new System.Drawing.Size(31, 30);
-            this.btnSaveTableProvider.TabIndex = 0;
-            this.btnSaveTableProvider.UseVisualStyleBackColor = true;
-            this.btnSaveTableProvider.Click += new System.EventHandler(this.btnSaveTableProvider_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel5);
@@ -330,16 +229,6 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(269, 70);
             this.panel5.TabIndex = 10;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources.key_icon_4;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
             // 
             // chkBoxAutoIncrement
             // 
@@ -425,38 +314,6 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.panel3.Size = new System.Drawing.Size(269, 404);
             this.panel3.TabIndex = 8;
             // 
-            // btnRemove
-            // 
-            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemove.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnRemove.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.btnRemove.IconColor = System.Drawing.Color.Black;
-            this.btnRemove.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRemove.IconSize = 18;
-            this.btnRemove.Location = new System.Drawing.Point(236, 5);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(28, 28);
-            this.btnRemove.TabIndex = 8;
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnAdd.IconColor = System.Drawing.Color.Black;
-            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdd.IconSize = 18;
-            this.btnAdd.Location = new System.Drawing.Point(200, 5);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(28, 28);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -521,6 +378,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.optionIndent.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.optionIndent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.optionIndent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.optionIndent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.optionIndent.ForeColor = System.Drawing.SystemColors.Window;
             this.optionIndent.Items.AddRange(new object[] {
             "1 Spaces",
@@ -531,7 +389,138 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.optionIndent.Size = new System.Drawing.Size(100, 25);
             this.optionIndent.SelectedIndexChanged += new System.EventHandler(this.optionIndent_SelectedIndexChanged);
             // 
-            // FrmApp
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.btnCopyTableProvider);
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Location = new System.Drawing.Point(596, 22);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(38, 76);
+            this.panel4.TabIndex = 16;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources._53453892_49908900_3a04_11e9_9dce_77ed3d694326;
+            this.pictureBox2.Location = new System.Drawing.Point(7, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnCopyTable
+            // 
+            this.btnCopyTable.FlatAppearance.BorderSize = 0;
+            this.btnCopyTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCopyTable.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources.copy;
+            this.btnCopyTable.Location = new System.Drawing.Point(3, 41);
+            this.btnCopyTable.Name = "btnCopyTable";
+            this.btnCopyTable.Size = new System.Drawing.Size(32, 32);
+            this.btnCopyTable.TabIndex = 11;
+            this.btnCopyTable.UseVisualStyleBackColor = true;
+            this.btnCopyTable.Click += new System.EventHandler(this.btnCopyTable_Click);
+            // 
+            // btnSaveTable
+            // 
+            this.btnSaveTable.FlatAppearance.BorderSize = 0;
+            this.btnSaveTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveTable.ForeColor = System.Drawing.Color.White;
+            this.btnSaveTable.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources.diskette;
+            this.btnSaveTable.Location = new System.Drawing.Point(3, 3);
+            this.btnSaveTable.Name = "btnSaveTable";
+            this.btnSaveTable.Size = new System.Drawing.Size(32, 32);
+            this.btnSaveTable.TabIndex = 10;
+            this.btnSaveTable.Text = "+";
+            this.btnSaveTable.UseVisualStyleBackColor = true;
+            this.btnSaveTable.Click += new System.EventHandler(this.btnSaveTable_Click);
+            // 
+            // btnCopyTableProvider
+            // 
+            this.btnCopyTableProvider.FlatAppearance.BorderSize = 0;
+            this.btnCopyTableProvider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCopyTableProvider.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources.copy;
+            this.btnCopyTableProvider.Location = new System.Drawing.Point(3, 41);
+            this.btnCopyTableProvider.Name = "btnCopyTableProvider";
+            this.btnCopyTableProvider.Size = new System.Drawing.Size(32, 32);
+            this.btnCopyTableProvider.TabIndex = 11;
+            this.btnCopyTableProvider.UseVisualStyleBackColor = true;
+            this.btnCopyTableProvider.Click += new System.EventHandler(this.btnCopyTableProvider_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources.diskette;
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(32, 32);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "+";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnSaveTableProvider_Click);
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources.info;
+            this.btnInfo.Location = new System.Drawing.Point(3, 3);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(32, 32);
+            this.btnInfo.TabIndex = 12;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources._53453892_49908900_3a04_11e9_9dce_77ed3d694326;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources.key_icon_4;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources.remove;
+            this.btnRemove.Location = new System.Drawing.Point(235, 7);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(24, 24);
+            this.btnRemove.TabIndex = 10;
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Image = global::SQFLite_Table_Class_Builder_for_Flutter.Properties.Resources.add;
+            this.btnAdd.Location = new System.Drawing.Point(205, 7);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(24, 24);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnSaveTableProvider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -543,23 +532,19 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FrmApp";
+            this.Name = "btnSaveTableProvider";
             this.Text = "SQFLite Table Class Builder";
             this.Load += new System.EventHandler(this.FrmApp_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -568,6 +553,10 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tableLayoutPanel2.ResumeLayout(false);
             this.toolStripFooter.ResumeLayout(false);
             this.toolStripFooter.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,27 +577,27 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel6;
-        private FontAwesome.Sharp.IconButton btnCopyTable;
-        private FontAwesome.Sharp.IconButton btnSaveTable;
-        private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton btnCopyTableProvider;
-        private FontAwesome.Sharp.IconButton btnSaveTableProvider;
         private System.Windows.Forms.Label lblTableFileName;
         private System.Windows.Forms.Label lblTableProviderFileName;
         private System.Windows.Forms.TextBox tBoxTableCode;
         private System.Windows.Forms.TextBox tBoxTableProviderCode;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.CheckBox chkBoxAutoIncrement;
-        private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconButton btnRemove;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel7;
-        private FontAwesome.Sharp.IconButton btnInfo;
         private System.Windows.Forms.ToolStrip toolStripFooter;
         private System.Windows.Forms.ToolStripComboBox optionIndent;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnCopyTable;
+        private System.Windows.Forms.Button btnSaveTable;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnCopyTableProvider;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnInfo;
     }
 }
 

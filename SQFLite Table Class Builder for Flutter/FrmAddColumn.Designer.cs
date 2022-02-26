@@ -33,8 +33,8 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cBoxDataType = new System.Windows.Forms.ComboBox();
-            this.btnCancel = new FontAwesome.Sharp.IconButton();
-            this.btnOk = new FontAwesome.Sharp.IconButton();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tBoxColumnName
@@ -71,27 +71,11 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.cBoxDataType.Location = new System.Drawing.Point(106, 41);
             this.cBoxDataType.Name = "cBoxDataType";
             this.cBoxDataType.Size = new System.Drawing.Size(170, 23);
-            this.cBoxDataType.TabIndex = 6;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCancel.IconColor = System.Drawing.Color.Black;
-            this.btnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancel.Location = new System.Drawing.Point(106, 70);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(89, 23);
-            this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.cBoxDataType.TabIndex = 1;
             // 
             // btnOk
             // 
-            this.btnOk.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnOk.IconColor = System.Drawing.Color.Black;
-            this.btnOk.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOk.Location = new System.Drawing.Point(201, 70);
+            this.btnOk.Location = new System.Drawing.Point(106, 71);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 4;
@@ -99,14 +83,24 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(187, 70);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(89, 23);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FrmAddColumn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(288, 107);
-            this.Controls.Add(this.cBoxDataType);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.cBoxDataType);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tBoxColumnName);
@@ -114,7 +108,6 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmAddColumn";
             this.Text = "New";
-            this.Load += new System.EventHandler(this.FrmAddColumn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,8 +118,8 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
         private System.Windows.Forms.TextBox tBoxColumnName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton btnOk;
-        private FontAwesome.Sharp.IconButton btnCancel;
         private System.Windows.Forms.ComboBox cBoxDataType;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

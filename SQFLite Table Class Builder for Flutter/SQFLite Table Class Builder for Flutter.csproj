@@ -39,9 +39,6 @@
     <ApplicationIcon>flutter-2752187-2285004.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -97,7 +94,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +124,11 @@
   <ItemGroup>
     <Content Include="flutter-2752187-2285004.ico" />
     <Content Include="image.jpg" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\diskette.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\add.png" />
     <None Include="Resources\editing.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
