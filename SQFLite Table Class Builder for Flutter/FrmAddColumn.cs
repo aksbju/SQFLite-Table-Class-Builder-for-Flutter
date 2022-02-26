@@ -27,7 +27,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
         private void btnOk_Click(object sender, EventArgs e)
         {
             this.ColumnName = this.tBoxColumnName.Text;
-            this.DataType = this.tBoxDataType.Text;
+            this.DataType = this.cBoxDataType.Text;
             this.Close();
         }
     }

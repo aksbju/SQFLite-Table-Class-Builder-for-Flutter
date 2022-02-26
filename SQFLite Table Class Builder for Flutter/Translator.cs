@@ -37,13 +37,17 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tableCode += Environment.NewLine;
             foreach (var each in columns) 
             {
-                if (each.DataType == "INTEGER") 
+                if (each.DataType == "INTEGER")
                 {
-                    this.tableCode += indent + $"int {each.ColumnName};";
+                    this.tableCode += indent + $"late int {each.ColumnName};";
                 }
                 else if (each.DataType == "TEXT")
                 {
-                    this.tableCode += indent + $"String {each.ColumnName};";
+                    this.tableCode += indent + $"late String {each.ColumnName};";
+                }
+                else
+                {
+                    this.tableCode += indent + $"late dynamic {each.ColumnName};";
                 }
                 this.tableCode += Environment.NewLine;
             }
@@ -135,7 +139,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             // insert
             this.tableProviderCode += indent + $"Future insert({StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())} {this.tableName.Replace(" ", "_").ToLower()}) async" + " {";
             this.tableProviderCode += Environment.NewLine;
-            this.tableProviderCode += indent + indent + $"await db.insert($table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}, {this.tableName.Replace(" ", "_").ToLower()}.toMap());";
+            this.tableProviderCode += indent + indent + $"await db.insert(table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}, {this.tableName.Replace(" ", "_").ToLower()}.toMap());";
             this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += indent + "}";
             this.tableProviderCode += Environment.NewLine;
@@ -143,9 +147,9 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.tableProviderCode += Environment.NewLine;
 
             // get
-            this.tableProviderCode += indent + $"Future<{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}> get({(this.columns[this.primaryKey].DataType == "INTEGER" ? "int" : this.columns[this.primaryKey].DataType == "TEXT" ? "String" : "dynamic") + $" {this.columns[this.primaryKey].ColumnName}"}) async" + " {";
+            this.tableProviderCode += indent + $"Future<List<{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}>> get({(this.columns[this.primaryKey].DataType == "INTEGER" ? "int" : this.columns[this.primaryKey].DataType == "TEXT" ? "String" : "dynamic") + $" {this.columns[this.primaryKey].ColumnName}"}) async" + " {";
             this.tableProviderCode += Environment.NewLine;
-            this.tableProviderCode += indent + indent + $"List<Map<String, dynamic>> maps = await db.query($table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())},";
+            this.tableProviderCode += indent + indent + $"List<Map<String, dynamic>> maps = await db.query(table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())},";
             this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += indent + indent + indent + "columns: [";
             this.tableProviderCode += Environment.NewLine;
@@ -156,12 +160,25 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             }
 
 
-            this.tableProviderCode += indent + indent + indent + "]";
+            this.tableProviderCode += indent + indent + indent + "],";
             this.tableProviderCode += Environment.NewLine;
-            this.tableProviderCode += "";
+            this.tableProviderCode += indent + indent + indent + $"where: '$column{StringExtensions.ToTitleCase(this.columns[this.primaryKey].ColumnName.Replace("_", ""))} = ?',";
+            this.tableProviderCode += Environment.NewLine;
+            this.tableProviderCode += indent + indent + indent + $"whereArgs: [{this.columns[this.primaryKey].ColumnName.Replace("_", "")}]";
+
+
 
             this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += indent + indent + ");";
+            this.tableProviderCode += Environment.NewLine;
+            this.tableProviderCode += indent + indent + "if (maps.isNotEmpty) {";
+            this.tableProviderCode += Environment.NewLine;
+            this.tableProviderCode += indent + indent + indent + $"return " + $"{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}.fromMap(maps.first);";
+            this.tableProviderCode += Environment.NewLine;
+            this.tableProviderCode += indent + indent + "}";
+            this.tableProviderCode += Environment.NewLine;
+            this.tableProviderCode += indent + indent + "return null;";
+            this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += indent + "}";
             this.tableProviderCode += Environment.NewLine;
@@ -171,7 +188,16 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             // delete
             this.tableProviderCode += indent + $"Future delete({StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())} {this.tableName.Replace(" ", "_").ToLower()}) async" + " {";
             this.tableProviderCode += Environment.NewLine;
-            //// Code here
+            this.tableProviderCode += indent + indent + "return await db.delete(" +
+                Environment.NewLine +
+                indent + indent + indent + $"table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}, " +
+                Environment.NewLine +
+                indent + indent + indent + $"where: '$column{StringExtensions.ToTitleCase(this.columns[this.primaryKey].ColumnName.Replace("_", ""))} = ?'," +
+                Environment.NewLine +
+                indent + indent + indent + $"whereArgs: [{this.tableName.Replace(" ", "_").ToLower()}.{this.columns[this.primaryKey].ColumnName.Replace("_", "")}]" +
+                Environment.NewLine +
+                indent + indent + ");";
+            this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += indent + "}";
             this.tableProviderCode += Environment.NewLine;
 
@@ -180,7 +206,18 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             // update
             this.tableProviderCode += indent + $"Future update({StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())} {this.tableName.Replace(" ", "_").ToLower()}) async" + " {";
             this.tableProviderCode += Environment.NewLine;
-            //// Code here
+            this.tableProviderCode += indent + indent + "return await db.update(" +
+                Environment.NewLine +
+                indent + indent + indent + $"table{StringExtensions.ToTitleCase(this.tableName.Replace(" ", "_").ToLower())}, " +
+                Environment.NewLine +
+                indent + indent + indent + $"{this.tableName.Replace(" ", "_").ToLower()}.toMap()" +
+                Environment.NewLine +
+                indent + indent + indent + $"where: '$column{StringExtensions.ToTitleCase(this.columns[this.primaryKey].ColumnName.Replace("_", ""))} = ?'," +
+                Environment.NewLine +
+                indent + indent + indent + $"whereArgs: [{this.tableName.Replace(" ", "_").ToLower()}.{this.columns[this.primaryKey].ColumnName.Replace("_", "")}]" +
+                Environment.NewLine +
+                indent + indent + ");";
+            this.tableProviderCode += Environment.NewLine;
             this.tableProviderCode += indent + "}";
             this.tableProviderCode += Environment.NewLine;
 

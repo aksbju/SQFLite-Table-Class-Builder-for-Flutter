@@ -95,7 +95,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
             this.columns = new List<Column>();
             this.columns.Add(new SQFLite_Table_Class_Builder_for_Flutter.Column
             {
-                ColumnName = "_id",
+                ColumnName = "id",
                 DataType = "INTEGER"
             });
             this.dtbColumns.DataSource = this.columns;
