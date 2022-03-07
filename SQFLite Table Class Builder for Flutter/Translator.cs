@@ -124,7 +124,11 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
                 int counter = 0;
                 foreach (var each in columns)
                 {
-                    this.tableProviderCode += indent + indent + indent + indent + indent + indent + $"$column{StringExtensions.ToTitleCase(each.ColumnName.Replace("_", ""))} {each.DataType}{(primaryKey == counter ? " PRIMARY KEY" : "")}{(primaryKey == counter && this.autoIncrement ? " AUTOINCREMENT" : "")},";
+                    this.tableProviderCode += indent + indent + indent + indent + indent + indent + $"$column{StringExtensions.ToTitleCase(each.ColumnName.Replace("_", ""))} {each.DataType}{(primaryKey == counter ? " PRIMARY KEY" : "")}{(primaryKey == counter && this.autoIncrement ? " AUTOINCREMENT" : "")}";
+                    if(each != columns.First() && each != columns.Last())
+                    {
+                        this.tableProviderCode += ",";
+                    }
                     this.tableProviderCode += Environment.NewLine;
                     counter++;
                 }
