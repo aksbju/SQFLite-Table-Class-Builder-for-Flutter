@@ -111,7 +111,7 @@ namespace SQFLite_Table_Class_Builder_for_Flutter
                 this.tableProviderCode += Environment.NewLine;
                 this.tableProviderCode += indent + indent + "db = await openDatabase(";
                 this.tableProviderCode += Environment.NewLine;
-                this.tableProviderCode += indent + indent + indent + "dbPath, version: 2,";
+                this.tableProviderCode += indent + indent + indent + "dbPath, version: 1,";
                 this.tableProviderCode += Environment.NewLine;
                 this.tableProviderCode += indent + indent + indent + "onCreate:";
                 this.tableProviderCode += Environment.NewLine;
